@@ -1,0 +1,28 @@
+{
+  "name": "require-pr-content",
+  "version": "1.0.0",
+  "description": "GitHub Action that scans the body and title for a pull request for specific content.",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build src/index.js --license licenses.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samueljmello/require-pr-content.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samueljmello/require-pr-content/issues"
+  },
+  "homepage": "https://github.com/samueljmello/require-pr-content#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "@vercel/ncc": "^0.34.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.23.0"
+  }
+}

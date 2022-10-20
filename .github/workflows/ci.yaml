@@ -1,0 +1,23 @@
+name: Continuous Integration
+on:
+  push:
+    branches: 
+      - main
+      - feature/**
+      - defect/**
+  pull_request:
+    branches: 
+      - main
+jobs:
+  npm:
+    name: NPM
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.1.0
+      - uses: actions/setup-node@v3.5.1
+        with:
+          node-version: 16
+          cache: npm
+      - run: npm ci
+      - run: npm run style:check
+      - run: npm test
